@@ -1,0 +1,11 @@
+[
+  {
+      "filename": "getDataUrl.js",
+      "type": "application/javascript",
+      "language": "JavaScript",
+      "raw_url": "https://gist.githubusercontent.com/bmorrisondev/0f76b24844f2ad368c6da0851d2ea506/raw/17a15cf360c77757516dcf0e9fd539e1737477ec/getDataUrl.js",
+      "size": 238,
+      "truncated": false,
+      "content": "function getDataUrl(file) {\n  return new Promise((resolve, reject) => {\n    var reader = new FileReader();\n    reader.readAsDataURL(file);\n    reader.onload = () => resolve(reader.result);\n    reader.onerror = err => reject(err);\n  });\n};"
+  }
+]
