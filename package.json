@@ -1,0 +1,29 @@
+{
+  "name": "autocarbon",
+  "version": "1.0.0",
+  "description": "An app that can programmitcally create code screenshots using GitHub Gists",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmorrisondev/autocarbon.git"
+  },
+  "keywords": [
+    "nodejs",
+    "screenshot"
+  ],
+  "author": "Brian Morrison II",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmorrisondev/autocarbon/issues"
+  },
+  "homepage": "https://github.com/bmorrisondev/autocarbon#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "html-to-image": "^0.1.1",
+    "jsdom": "^16.2.2",
+    "prism": "^4.1.2"
+  }
+}
