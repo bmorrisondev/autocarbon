@@ -1,6 +1,7 @@
 const axios = require('axios');
 const jsdom = require('jsdom')
 const Prism = require('prismjs')
+const htmlToImage = require('html-to-image');
 const loadLanguages = require('prismjs/components/index.js');
 
 loadLanguages()
@@ -31,7 +32,7 @@ const githubGistApiBase = "https://api.github.com/gists";
           c.parentNode.className = `${c.parentNode.className} language-${name}`
         }
       });
-      resolve(dom.window.document);
+      resolve(dom.window.document.body.innerHTML);
     })
   }
 
@@ -47,5 +48,7 @@ const githubGistApiBase = "https://api.github.com/gists";
     </div>
   `
 
-  let document = await highlightCode(div)
+  let htmlDiv = await highlightCode(div)
+  var dataUrl = await htmlToImage.toPng(htmlDiv)
+  download(dataUrl, 'my-node.png');
 })()
